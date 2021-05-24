@@ -59,7 +59,7 @@ header > nav.navbar {
   display: flex;
   align-items: center;
 }
-.navbar .navbar-brand > a{
+.navbar .navbar-brand > a {
   text-decoration: none;
   font-size: 23px;
   color: #424040;
@@ -436,7 +436,7 @@ main .content .content-skills {
   }
 }
 @media screen and (max-width: 765px) {
-  .navbar .navbar-brand > a{
+  .navbar .navbar-brand > a {
     font-size: 15px;
   }
   header > nav.navbar {
@@ -471,11 +471,14 @@ main .content .content-skills {
   #gallery .header > p {
     width: 100%;
   }
-  
+
   #gallery .body {
     width: 100%;
   }
   .content-aboutme aside .description {
     padding: 0px;
+  }
+  .footer .cp p {
+    font-size: 6pt;
   }
 }
