@@ -436,6 +436,9 @@ main .content .content-skills {
   }
 }
 @media screen and (max-width: 765px) {
+  .navbar .navbar-brand > a{
+    font-size: 15px;
+  }
   header > nav.navbar {
     padding: 0px 25px;
   }
