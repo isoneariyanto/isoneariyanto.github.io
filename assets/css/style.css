@@ -125,7 +125,7 @@ main .content .content-banner .banner-body {
 }
 
 .banner-left > a > img {
-  width: 30px;
+  /* width: 30px; */
 }
 .banner-left > a > img:hover {
   transition: all 0.3s;
