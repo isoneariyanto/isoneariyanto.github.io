@@ -117,6 +117,7 @@ main .content .content-banner .banner-body {
   flex-direction: row;
 }
 .banner-body .banner-left {
+  padding: 10px;
   width: 5%;
   align-items: center;
   display: flex;
@@ -125,7 +126,7 @@ main .content .content-banner .banner-body {
 }
 
 .banner-left > a > img {
-  /* width: 30px; */
+  width: 30px;
 }
 .banner-left > a > img:hover {
   transition: all 0.3s;
@@ -166,7 +167,7 @@ main .content .content-banner .banner-right .me {
 
 /* ----------------- CSS CONTENT SKILL --------------------*/
 main .content .content-skills {
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   background-color: var(--content-1st-bg);
@@ -289,7 +290,7 @@ main .content .content-skills {
 }
 
 .content-aboutme {
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -442,10 +443,12 @@ main .content .content-skills {
   main .content .content-banner .banner-center .text h1 {
     font-size: 25pt;
   }
+  #skills .header > p {
+    width: 100%;
+  }
   .content-skills .body {
     padding: 0px;
   }
-
   .glide .glide__slide {
     width: 40px;
   }
@@ -456,5 +459,15 @@ main .content .content-skills {
   .paralax q,
   .paralax p {
     font-size: 20px;
+  }
+  #gallery .header > p {
+    width: 100%;
+  }
+  
+  #gallery .body {
+    width: 100%;
+  }
+  .content-aboutme aside .description {
+    padding: 0px;
   }
 }
