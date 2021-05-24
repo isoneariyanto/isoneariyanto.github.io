@@ -58,7 +58,12 @@ header > nav.navbar {
   flex-grow: 1;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+}
+.navbar .navbar-brand > a{
+  text-decoration: none;
+  font-size: 23px;
+  color: #424040;
+  font-weight: bold;
 }
 
 .navbar .navbar-menu {
