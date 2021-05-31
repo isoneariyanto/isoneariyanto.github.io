@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300;1,400;1,600&family=Poly:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,400;1,100;1,200;1,400&display=swap");
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(191, 201, 202, 0.8);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #99a3a4;
+}
+
+:root {
+  --banner-job-color: #ff3e07;
+  --content-1st-bg: #fff;
+  --content-2nd-bg: #ececea;
+  --nav-item-color: #030303;
+  --nav-item-color-hover: #ff3e07;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Poppins", "Poly";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  overflow: hidden;
+}
+
+header {
+  display: inline;
+}
+header > nav.navbar {
+  height: 10vh;
+  display: flex;
+  background-color: var(--content-1st-bg);
+  flex-direction: row;
+  padding: 0px 90px;
+  position: sticky;
+  bottom: 0;
+  box-shadow: 0px 0.5px 20px 8px #ececea;
+}
+.navbar .navbar-brand {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-brand > a {
+  text-decoration: none;
+  font-size: 23px;
+  color: #424040;
+  font-weight: bold;
+}
+
+.navbar .navbar-menu {
+  flex-grow: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar .navbar-menu > span {
+  font-size: 37px;
+  display: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+.navbar .navbar-menu ul.nav li {
+  display: inline;
+  margin: 0px 5px;
+}
+
+.navbar .navbar-menu ul.nav .nav-item > a {
+  color: #000;
+  font-size: 12pt;
+  font-weight: 500;
+  text-decoration: none;
+}
+.navbar .navbar-menu ul.nav .nav-item > a:hover {
+  transition: color 0.5s;
+}
+
+.nav-item.active a > span {
+  color: var(--nav-item-color-hover);
+}
+/* ------------ Main Element Css Code  ---------------- */
+main {
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+main .content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------  Banner Element Css COde --------------*/
+main .content .content-banner {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid var(--content-2nd-bg);
+}
+main .content .content-banner .banner-body {
+  display: flex;
+  flex-direction: row;
+}
+.banner-body .banner-left {
+  padding: 10px;
+  width: 5%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner-left > a > img {
+  width: 30px;
+}
+.banner-left > a > img:hover {
+  transition: all 0.3s;
+  width: 40px;
+}
+main .content .content-banner .banner-center {
+  position: relative;
+  width: 45%;
+  padding: 0px 20px 0px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* main .content .content-banner .banner-center .text h2,
+main .content .content-banner .banner-center .text h1,
+main .content .content-banner .banner-center .text p {
+  position: absolute;
+} */
+main .content .content-banner .banner-center .text h2 {
+  color: var(--banner-job-color);
+}
+main .content .content-banner .banner-center .text h1 {
+  /* line-height: 20px; */
+  font-size: 30pt;
+}
+main .content .content-banner .banner-right {
+  width: 50%;
+  background-image: url(../image/vector-creator4_crop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  display: flex;
+  align-items: top;
+  /* padding: 40px; */
+  justify-content: center;
+}
+
+main .content .content-banner .banner-right .me {
+  width: 330px;
+}
+/* ----------------- CSS CONTENT SKILL --------------------*/
+main .content .content-skills {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--content-1st-bg);
+}
+
+#skills .header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#skills .header > p {
+  margin: 0;
+  width: 70%;
+}
+
+.content-skills .body {
+  padding: 30px 130px;
+}
+
+.glide .glide__slide {
+  background-color: #eeeeee;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px 2px #d4d4d4;
+}
+.glide .glide__slide > img {
+  width: 150px;
+  height: 150px;
+}
+
+.glide .glide__slide .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  position: absolute;
+  background-color: rgba(115, 119, 119, 0.815);
+  transition: height 0.5s ease-in-out;
+}
+.glide__slide .overlay > h3 {
+  display: none;
+  color: #fff;
+  font-family: "Polly";
+  font-weight: 300;
+  font-size: 45pt;
+  transition: all ease 0.5s;
+}
+.glide .glide__slide:hover .overlay {
+  width: 100%;
+  height: 100%;
+}
+.glide__slide:hover .overlay > h3 {
+  display: initial;
+}
+
+.glide .glide__arrows button {
+  color: rgb(212, 212, 212);
+  font-size: 40px;
+  border: none;
+}
+.glide .glide__arrows button:hover {
+  color: #524949;
+  transition: color 0.5s;
+}
+#skills .header > h1,
+#gallery .header > h1 {
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 28pt;
+}
+
+/* -------- PARALAX Css Code ----------*/
+.paralax {
+  height: 321px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 40px;
+}
+
+.paralax q,
+.paralax p {
+  color: #fff;
+  font-family: "Poly";
+  font-size: 30px;
+}
+
+.par-1 {
+  background-image: url("../image/paralax1.jpeg");
+}
+.par-2 {
+  background-image: url("../image/paralax2.jpeg");
+}
+
+/* ---------- Gallery Code ------------- */
+.content-gallery {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+#gallery .header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#gallery .header > p {
+  margin: 0;
+  width: 70%;
+}
+
+#gallery .body {
+  width: 70%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  /* box-shadow: 2px 2px 10px 10px var(--content-2nd-bg); */
+}
+#gallery .body .column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+/* Create four equal columns that sits next to each other */
+#gallery .body .column .row {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 3px 3px 4px 5px var(--content-2nd-bg);
+}
+
+#gallery .body .column .row > img {
+  width: 100%;
+}
+
+.content-aboutme {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-aboutme aside {
+  margin: 70px auto 20px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+.content-aboutme aside .photos {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-aboutme aside .photos-box {
+  background-color: #6b6660;
+  width: 260px;
+  height: 270px;
+  box-shadow: 1px 1px 30px 3px #424040;
+}
+.content-aboutme aside .photos-box > img {
+  position: relative;
+  bottom: 70px;
+  left: -40px;
+  width: 340px;
+}
+.content-aboutme aside .description {
+  padding: 0px 20px;
+  width: 70%;
+}
+.content-aboutme aside .description > h1 {
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 25pt;
+}
+.content-aboutme aside .description > h1 > span {
+  font-weight: 300;
+  font-size: 45pt;
+}
+.content-aboutme aside .description span {
+  font-size: 18pt;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content-aboutme article {
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* --------- Footer Css Code ------------ */
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 270px;
+}
+
+.footer .content-footer {
+  background-color: #524949;
+  flex-grow: 2;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer .content-footer .item {
+  padding: 0px 15px;
+  color: #fff;
+  width: 30%;
+}
+.footer .content-footer .quote > q {
+  font-family: "Polly";
+  letter-spacing: 2px;
+}
+.footer .content-footer .item:nth-child(1) {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.footer .cp {
+  background-color: #544d4d;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.footer .cp p {
+  display: inline;
+  color: #b4b0aa;
+  font-size: 10pt;
+}
+
+@media screen and (max-width: 1024px) {
+  main .content .content-banner .banner-body {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+  main .content .content-banner .banner-left {
+    flex-direction: row;
+  }
+  main .content .content-banner .banner-center {
+    padding: 60px;
+    justify-content: flex-start;
+  }
+  main .content .content-banner .banner-center,
+  main .content .content-banner .banner-left {
+    width: 100%;
+  }
+  main .content .content-banner .banner-right {
+    display: none;
+  }
+  main .content .content-banner .banner-center {
+    height: vh;
+  }
+  .footer .content-footer .item {
+    flex-grow: 1;
+    width: 100%;
+  }
+  .content-aboutme aside {
+    flex-direction: column;
+  }
+  .content-aboutme aside .photos,
+  .content-aboutme aside .description {
+    width: 100%;
+  }
+  .content-aboutme aside .description > h1 > span {
+    font-size: 30pt;
+  }
+  .content-aboutme aside .description > h1 {
+    font-size: 20pt;
+  }
+}
+@media screen and (max-width: 765px) {
+  .navbar .navbar-brand > a {
+    font-size: 15px;
+  }
+  header > nav.navbar {
+    padding: 0px 25px;
+  }
+  .navbar-brand > h2 {
+    font-size: 12pt;
+  }
+  main .content .content-banner .banner-center .text h2 {
+    font-size: 17pt;
+  }
+  main .content .content-banner .banner-center .text h1 {
+    font-size: 25pt;
+  }
+  #skills .header > p {
+    width: 100%;
+  }
+  .content-skills .body {
+    padding: 0px;
+  }
+  .glide .glide__slide {
+    width: 40px;
+  }
+  .glide .glide__slide > img {
+    width: 90px;
+    height: 90px;
+  }
+  .paralax q,
+  .paralax p {
+    font-size: 20px;
+  }
+  #gallery .header > p {
+    width: 100%;
+  }
+
+  #gallery .body {
+    width: 100%;
+  }
+  .content-aboutme aside .description {
+    padding: 0px;
+  }
+  .footer .cp p {
+    font-size: 6pt;
+  }
+}
